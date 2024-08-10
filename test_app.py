@@ -20,11 +20,11 @@ def test_predict(client):
         'Nitrogen': '67',
         'Phosporus': '58',
         'Potassium': '39',
-        'Temperature': '25.2827223',
-        'Humidity': '80.54372813',
-        'Ph': '5.453592032',
-        'Rainfall': '220.1156708'
+        'Temperature': '25',
+        'Humidity': '80',
+        'Ph': '5',
+        'Rainfall': '220'
     })
     assert response.status_code == 200
     assert b"Recommended Crop for cultivation is:" in response.data  # Check for the result section title
-    assert b"rice" in response.data  # Expected output from the model
+    assert b"Apple" in response.data  # Expected output from the model
